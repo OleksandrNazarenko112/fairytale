@@ -1,0 +1,30 @@
+<div class="quest-container">
+    <ng-container *ngFor="let step of quest">
+        <ng-container *ngIf="step.id === curretQuestionId">
+            <div class="question-container">
+                <h2>{{step.question}}</h2>
+            </div>
+            <div class="answers-container">
+                <ng-container *ngFor="let answer of step.answers">
+                    <label [for]="step.id" class="default-label">{{answer.label}}</label>
+                    <input 
+                        *ngIf="answer.input" 
+                        [name]="step.id"
+                        [formControl]="inputText" 
+                        [placeholder]="answer.placeholder" 
+                        class="default-input"
+                        autocomplete="off"
+                        (focus)="setValidator(answer)"
+                        type="text">
+                    <span *ngIf="inputText.invalid && inputText.touched" class="default-error">{{answer.errorText}}</span>
+                    <button
+                        *ngIf="answer.text"
+                        class="btn-accept" 
+                        [disabled]="answer.disabled"  
+                        (click)="nextQuestion(answer)">
+                        {{answer.text}}</button> 
+                </ng-container>
+            </div>
+        </ng-container>
+    </ng-container>
+</div>
