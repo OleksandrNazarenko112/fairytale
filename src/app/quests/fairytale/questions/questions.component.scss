@@ -1,8 +1,10 @@
 .question-container {
     min-height: 50%;
+    width: 100%;
     display: flex;
     color: #bdad58;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     border: 3px solid #494949;
@@ -16,16 +18,29 @@
 
 .quest-container {
     border: 3px solid #494949;
-    height: 100vh;
+    min-height: 100vh;
     border-radius: 20px;
     padding: 20px;
     background-color: #ccccc7;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        display: block;
+        max-width: 100%;
+        border-radius: 25px;
+        opacity: 0.9;
+    }
 }
 
 .answers-container {
-    margin-top: 20px;
+    width: 100%;
+    align-self: flex-end;
     .btn-accept {
         font-weight: bold;
         margin: 20px 0;
     }
+}
+
+.preload {
+    display: none;
 }
