@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent, QuestionsComponent } from './quests/fairytale';
+import { QuestionsIteratorComponent } from './shared/components';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    QuestionsIteratorComponent
   ],
   imports: [
     BrowserModule,
