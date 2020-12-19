@@ -1,10 +1,10 @@
 .question-container {
-    min-height: 50%;
+    min-height: 300px;
     width: 100%;
     display: flex;
     color: #bdad58;
     align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     border: 3px solid #494949;
@@ -22,8 +22,8 @@
     border-radius: 20px;
     padding: 20px;
     background-color: #ccccc7;
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     img {
         display: block;
         max-width: 100%;
@@ -34,10 +34,10 @@
 
 .answers-container {
     width: 100%;
-    align-self: flex-end;
+    // align-self: flex-end;
     .btn-accept {
         font-weight: bold;
-        margin: 20px 0;
+        margin: 15px 0;
     }
 }
 
